@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<label>Sample Screen</label><br>
+<input type="text" id="input">
+<button onclick="add_element_to_array()">Add</button>
+<button onclick="display_array()">Display</button>
+<br>
+<hr>
+<div id="display"></div>
+</body>
+<script>
+    let x = 0;
+    let array = Array();
+    let display = document.getElementById("display") ;
+    display.innerHTML="";
+    function add_element_to_array(){
+        array[x] = document.getElementById("input").value;
+        console.log(array);
+        x++;
+    }
+    function display_array(){
+        for(let i = 0;i<x;i++){
+            display.innerHTML += "Element "+i+" = "+array[i]+"<br>";
+        }
+    }
+</script>
+</html>
